@@ -1,0 +1,19 @@
+
+public class Aula05062016 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		float[][] valores = new float[3][3];
+		
+		
+		
+		
+	}
+	
+	
+	private float doCalc() {
+		
+	}
+
+}

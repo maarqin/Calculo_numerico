@@ -1,0 +1,60 @@
+
+public class Principal {
+		
+	private AB ab = new AB();
+
+	public static void main(String[] args) {
+		Principal p = new Principal();
+		
+		p.cValue(p.ab);
+		
+		System.out.println(p.ab.i);
+	}
+	
+	private void cValue(AB ab) {
+		ab.i += 10;
+	}
+	
+	
+	private class AB {
+		Integer i;	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static double calcular(double a, double b) {
+		double media = media(a, b); 
+		
+		double resultado = (Math.pow(media, 3) - (9 * media) + 3);
+		
+		double e = media - a;
+
+		if( e < 0.001 ) {
+			System.out.println("x = " + media + " | f(x) = " + resultado + " | b-a = " + e);
+			return 0;
+		}		
+		
+		
+		if( resultado > 0 ) {			
+			return calcular(media, b);
+		} else {
+			return calcular(a, media);
+		}
+		
+	}
+	
+	
+	public static double media(double a, double b) {
+		return (a + b) / 2;
+	}
+	
+	
+	
+}
